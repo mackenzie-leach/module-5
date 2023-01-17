@@ -1,14 +1,15 @@
 function findAuthorById(authors, id) {
- let foundAuthor = authors.find((author) => author.id === id);
- return foundAuthor;
+ return  findById(authors, id);
 }
-
 
 function findBookById(books, id) {
- let foundBooks = books.find((book) => book.id === id);
- return foundBooks;
+ return findById(books, id);
 }
 
+ //helper function
+function findById(array, id){
+  return array.find((item) => item.id === id)
+}
 
 function partitionBooksByBorrowedStatus(books) {
  let booksReturned = books.filter((book) =>
